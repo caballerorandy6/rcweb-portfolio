@@ -52,6 +52,7 @@ export default function Nav() {
           priority
           className="cursor-pointer object-contain w-48 h-auto"
         />
+        <p className="text-red-500"> UNDER CONSTRUCTION</p>
       </Link>
 
       {/* Susrituir por humberger menu */}
