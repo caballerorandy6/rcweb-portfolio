@@ -10,13 +10,6 @@ const config = {
   ],
   prefix: "",
   theme: {
-    container: {
-      center: true,
-      padding: "2rem",
-      screens: {
-        "2xl": "1400px",
-      },
-    },
     extend: {
       fontFamily: {
         roboto: ["var(--font-roboto)", "sans-serif"],
@@ -26,6 +19,7 @@ const config = {
         donkeybrown: "#A49781",
         gurkha: "#929874",
         gold: "#CBB26A",
+        dune: "#2B2927",
       },
     },
   },

@@ -3,59 +3,73 @@
 import Link from "next/link";
 import Image from "next/image";
 import TooltipShadcn from "../shadcn-components/TooltipShadcn";
-import ExperienceIcon from "@/app/ui/home/NavIcons/ExperienceIcon";
-import ProjectsIcon from "@/app/ui/home/NavIcons/ProjectsIcon";
-import AboutIcon from "@/app/ui/home/NavIcons/AboutIcon";
-import ContactLinks from "./ContactLinks";
-import { usePathname } from "next/navigation";
+import ExperienceIcon from "@/app/ui/Icons/ExperienceIcon";
+import ProjectsIcon from "@/app/ui/Icons/ProjectsIcon";
+import AboutIcon from "@/app/ui/Icons/AboutIcon";
+import HomeIcon from "@/app/ui/Icons/HomeIcon";
+import clsx from "clsx";
+import { useActiveSection } from "@/store/activeSectionStore";
 
 export default function Nav() {
-  const pathname = usePathname();
-  console.log(pathname);
+  const { activeSection, setActiveSection } = useActiveSection();
 
   const links = [
     {
+      name: "Home",
+      hash: "#home",
+      id: "home",
+      icon: <HomeIcon />,
+    },
+    {
       name: "Experience",
-      hash: "/#experience",
+      hash: "#experience",
       id: "experience",
       icon: <ExperienceIcon />,
     },
     {
       name: "Projects",
-      hash: "/#projects",
+      hash: "#projects",
       id: "projects",
       icon: <ProjectsIcon />,
     },
-    { name: "About", hash: "#about", id: "about", icon: <AboutIcon /> },
+    {
+      name: "About",
+      hash: "#about",
+      id: "about",
+      icon: <AboutIcon />,
+    },
   ];
 
   return (
-    <nav className="flex justify-around items-center">
+    <nav className="w-full mx-auto flex sm:justify-center justify-between items-center">
       <Link href="home">
         <Image
           src="/logo.webp"
           alt="RC WEB Logo"
-          width={100}
-          height={100}
+          width={500}
+          height={500}
+          quality={100}
           priority
-          className="cursor-pointer object-contain w-24 h-auto"
+          className="cursor-pointer object-contain w-48 h-auto"
         />
       </Link>
 
-      <ul className="flex justify-center items-center gap-8">
+      {/* Susrituir por humberger menu */}
+      <ul className="flex justify-center items-center gap-8 sm:hidden">
         {links.map((link) => (
           <Link
             key={link.id}
             href={link.hash}
-            className={`text-gurkha/60 hover:text-gold transition-colors font-semibold font-roboto ${
-              pathname === link.hash ? "text-gold" : ""
-            }`}
+            className={clsx(
+              "transform transition-transform duration-500 hover:scale-125 text-gurkha/80 hover:text-gold/90",
+              { "text-gold/90": activeSection === link.name }
+            )}
+            onClick={() => setActiveSection(link.name)}
           >
             <TooltipShadcn icon={link.icon}>{link.name}</TooltipShadcn>
           </Link>
         ))}
       </ul>
-      <ContactLinks />
     </nav>
   );
 }

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+
 import { roboto, concertOne } from "./ui/fonts";
 import Header from "@/app/ui/home/Header";
 
@@ -37,11 +38,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
       <body
         className={`w-full ${concertOne.variable} ${roboto.variable} overflow-y-scroll antialiased absolute top-0 z-[-2] bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]`}
       >
-        <Header />
+        {/* <Header /> */}
         {children}
       </body>
     </html>
