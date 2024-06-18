@@ -1,16 +1,6 @@
-import Link from "next/link";
 import Image from "next/image";
-import { Badge } from "@/components/ui/badge";
-import ExperienceIcon from "@/app/ui/Icons/ExperienceIcon";
-import CVIcon from "@/app/ui/Icons/CVIcon";
-import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
 import DialogShadcn from "../shadcn-components/DialogShadcn";
+import { useDialogState } from "@/store/dialogStore";
 
 const responsabilitiesRevature: string[] = [
   "Develop a responsive website for the company using the MERN stack.",
@@ -25,25 +15,28 @@ const responsabilitiesRevature: string[] = [
 ];
 
 export default function RevatureExperience() {
+  const { isOpenDialogRevature, setIsOpenDialogRevature } = useDialogState();
   return (
-    <div className="flex items-center gap-2">
+    <div className="flex flex-col md:flex-row lg:flex-col lg:text-center justify-center items-center">
       <Image
         src="/revature-logo.webp"
         alt="Revature-logo"
         width={120}
-        height={80}
+        height={120}
         quality={100}
         priority
-        className="rounded-md object-contain h-auto w-auto"
+        className="flex flex-col text-center lg:text-start"
       />
-      <div>
-        <p className="text-white/60 font-roboto text-md font-semibold">
-          Software Engineer: 2022
+      <div className="flex flex-col text-center lg:text-start">
+        <p className="text-white/80 font-roboto text-md font-semibold">
+          Software Engineer
         </p>
-        <p className="text-white/60 text-sm">Software Engineer</p>
+        <p className="text-white/80 text-sm">2022</p>
         <DialogShadcn
           title="Revature Responsibilities"
           experienceName="Revature"
+          isOpenDialog={isOpenDialogRevature}
+          setIsOpenDialog={setIsOpenDialogRevature}
         >
           {responsabilitiesRevature.map((item, index) => (
             <li key={index}> • {item}</li>

@@ -30,12 +30,12 @@ const links = [
 
 export default function ContactLinks() {
   return (
-    <ul className="flex justify-center items-center gap-8 mt-4">
+    <ul className="flex justify-center sm:justify-start items-center gap-8 mt-4">
       {links.map((link) => (
         <li key={link.id}>
           <Link
             href={link.href}
-            className="text-gurkha/60 hover:text-gold/80 transition-colors font-roboto font-semibold"
+            className="text-gurkha hover:text-gold transition-colors font-roboto font-semibold"
           >
             <TooltipShadcn icon={link.icon}>{link.name}</TooltipShadcn>
           </Link>

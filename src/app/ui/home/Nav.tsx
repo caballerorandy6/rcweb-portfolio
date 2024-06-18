@@ -2,16 +2,16 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import TooltipShadcn from "../shadcn-components/TooltipShadcn";
+//import TooltipShadcn from "../shadcn-components/TooltipShadcn";
 import ExperienceIcon from "@/app/ui/Icons/ExperienceIcon";
 import ProjectsIcon from "@/app/ui/Icons/ProjectsIcon";
 import AboutIcon from "@/app/ui/Icons/AboutIcon";
 import HomeIcon from "@/app/ui/Icons/HomeIcon";
 import clsx from "clsx";
-import { useActiveSection } from "@/store/activeSectionStore";
+//import { useActiveSection } from "@/store/activeSectionStore";
 
 export default function Nav() {
-  const { activeSection, setActiveSection } = useActiveSection();
+  //const { activeSection, setActiveSection } = useActiveSection();
 
   const links = [
     {
@@ -41,8 +41,8 @@ export default function Nav() {
   ];
 
   return (
-    <nav className="w-full mx-auto flex sm:justify-center justify-between items-center">
-      <Link href="home">
+    <nav className="w-full flex items-center">
+      <Link href="#" className="w-full ">
         <Image
           src="/logo.webp"
           alt="RC WEB Logo"
@@ -50,13 +50,12 @@ export default function Nav() {
           height={500}
           quality={100}
           priority
-          className="cursor-pointer object-contain w-48 h-auto"
+          className="cursor-pointer object-contain w-48 h-auto mx-auto"
         />
-        <p className="text-red-500"> UNDER CONSTRUCTION</p>
       </Link>
 
       {/* Susrituir por humberger menu */}
-      <ul className="flex justify-center items-center gap-8 sm:hidden">
+      {/* <ul className="flex justify-center items-center gap-8 sm:hidden">
         {links.map((link) => (
           <Link
             key={link.id}
@@ -70,7 +69,7 @@ export default function Nav() {
             <TooltipShadcn icon={link.icon}>{link.name}</TooltipShadcn>
           </Link>
         ))}
-      </ul>
+      </ul> */}
     </nav>
   );
 }

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import DialogShadcn from "../shadcn-components/DialogShadcn";
+import { useDialogState } from "@/store/dialogStore";
 
 const responsabilitiesRCWEB: string[] = [
   "Meeting with clients to discuss project requirements and objectives.",
@@ -15,8 +16,10 @@ const responsabilitiesRCWEB: string[] = [
 ];
 
 export default function RCWEBExperience() {
+  const { isOpenDialogRCWeb, setIsOpenDialogRCWEB } = useDialogState();
+
   return (
-    <div className="flex items-center gap-2">
+    <div className="flex flex-col md:flex-row lg:flex-col lg:text-center justify-center items-center">
       <Image
         src="/logo.webp"
         alt="RCWEB-logo"
@@ -26,12 +29,17 @@ export default function RCWEBExperience() {
         priority
         className="object-contain h-auto w-auto"
       />
-      <div>
-        <p className="text-white/60 font-roboto text-md font-semibold">
-          Freelancer: 2022 - Present
+      <div className="flex flex-col text-center">
+        <p className="text-white/80 font-roboto text-md font-semibold">
+          Freelancer Web Developer
         </p>
-        <p className="text-white/60 text-sm">Freelancer Web Developer</p>
-        <DialogShadcn title="RC WEB Responsibilities" experienceName="RCWEB">
+        <p className="text-white/80 text-sm">2022 - Present</p>
+        <DialogShadcn
+          title="RC WEB Responsibilities"
+          experienceName="RCWEB"
+          isOpenDialog={isOpenDialogRCWeb}
+          setIsOpenDialog={setIsOpenDialogRCWEB}
+        >
           {responsabilitiesRCWEB.map((item, index) => (
             <li key={index}> • {item}</li>
           ))}

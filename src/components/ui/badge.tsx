@@ -15,7 +15,7 @@ const badgeVariants = cva(
         destructive:
           "border-transparent bg-destructive text-destructive-foreground shadow hover:bg-destructive/80",
         outline: "text-foreground",
-        gold: "bg-dune/70 text-gurkha text-md font-normal shadow-2xl hover:text-gold/90 transition-colors font-roboto backdrop:blur-3xl border border-gold/30 hover:border-gold/40 rounded-full",
+        gold: "bg-dune/70 text-gurkha text-sm shadow-2xl hover:text-gold transition-colors font-roboto backdrop:blur-3xl border-2 border-gold/30 hover:border-gold/40 rounded-full",
       },
     },
     defaultVariants: {
