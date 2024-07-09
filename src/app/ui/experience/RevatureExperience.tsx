@@ -1,5 +1,5 @@
 import Image from "next/image";
-import DialogShadcn from "../shadcn-components/DialogShadcn";
+import DialogExperienceDetail from "@/app/ui/shadcn-components/DialogExperienceDetail";
 import { useDialogState } from "@/store/dialogStore";
 
 const responsabilitiesRevature: string[] = [
@@ -33,7 +33,7 @@ export default function RevatureExperience() {
           Software Engineer
         </p>
         <p className="text-white/80 text-sm">2022</p>
-        <DialogShadcn
+        <DialogExperienceDetail
           title="Revature Responsibilities"
           experienceName="Revature"
           isOpenDialog={isOpenDialogRevature}
@@ -42,7 +42,7 @@ export default function RevatureExperience() {
           {responsabilitiesRevature.map((item, index) => (
             <li key={index}> • {item}</li>
           ))}
-        </DialogShadcn>
+        </DialogExperienceDetail>
       </div>
     </div>
   );

@@ -20,7 +20,7 @@ interface DialogShadcnProps {
   className?: string;
 }
 
-export default function DialogShadcn({
+export default function DialogExperienceDetail({
   title,
   children,
   isOpenDialog,
