@@ -3,21 +3,22 @@ import DialogShadcn from "../shadcn-components/DialogShadcn";
 import { useDialogState } from "@/store/dialogStore";
 
 const responsabilitiesRevature: string[] = [
-  "Develop a responsive website for the company using the MERN stack.",
-  "The website must display Google reviews of the business provided by customers.",
-  "The website must be able to display all the detailed information of the company and must offer different ways to contact customers.",
-  "The deployment of the web page must be in AWS using services such as S3, Route 53, CloudFront and Certificate Manager.",
-  "The website must be responsive and have a good user experience.",
-  "Other technologies used in this project were TailwindCSS, HTML and some NPM packages.",
-  "I set up hosting for the website and completed the go-live process by uploading the page to the hosting account.",
-  "Meeting with clients to discuss project requirements and objectives.",
-  "Designing and developing websites with a focus on user experience and functionality.",
+  "Assisting senior developers in designing and building websites or web applications.",
+  "Writing and maintaining code for website features and functionalities.",
+  "Collaborating with the development team to troubleshoot and fix bugs or issues.",
+  "Learning and applying best practices in web development to improve your coding skills.",
+  "Assisting in the integration of third-party APIs and services.",
+  "Participating in code reviews to ensure code quality and adherence to coding standards.",
+  "Testing websites or web applications to identify and resolve compatibility issues across different devices and browsers.",
+  "Supporting website updates and content changes as required.",
+  "Staying up-to-date with the latest trends and technologies in web development.",
+  "Assisting in maintaining documentation related to projects and codebases.",
 ];
 
 export default function RevatureExperience() {
   const { isOpenDialogRevature, setIsOpenDialogRevature } = useDialogState();
   return (
-    <div className="flex flex-col md:flex-row lg:flex-col lg:text-center justify-center items-center">
+    <div className="flex flex-col lg:text-center justify-center items-center transition-colors shadow-2xl bg-gradient-to-bl from-gold/10 to-dune/100 rounded-lg mt-4">
       <Image
         src="/revature-logo.webp"
         alt="Revature-logo"
@@ -25,9 +26,9 @@ export default function RevatureExperience() {
         height={120}
         quality={100}
         priority
-        className="flex flex-col text-center lg:text-start"
+        className="object-contain h-auto w-auto"
       />
-      <div className="flex flex-col text-center lg:text-start">
+      <div className="flex flex-col text-center">
         <p className="text-white/80 font-roboto text-md font-semibold">
           Software Engineer
         </p>

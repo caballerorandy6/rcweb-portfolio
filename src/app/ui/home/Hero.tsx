@@ -7,7 +7,7 @@ export default function Hero() {
   return (
     <div
       id="home"
-      className="w-8/12 md:w-9/12 lg:w-7/12 lg:place-self-start lg:ml-20"
+      className="w-8/12 md:w-9/12 lg:w-7/12 lg:place-self-start lg:ml-20 pt-32"
     >
       <div className="sm:flex items-center justify-start gap-2">
         <h1 className="text-gold text-center sm:text-start text-4xl font-concertOne mb-2">

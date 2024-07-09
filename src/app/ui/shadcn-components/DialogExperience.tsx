@@ -20,7 +20,7 @@ interface DialogShadcnProps {
   className?: string;
 }
 
-export default function DialogShadcn({
+export default function DialogExperience({
   title,
   children,
   isOpenDialog,
@@ -33,7 +33,7 @@ export default function DialogShadcn({
           <Button
             variant="ghost"
             onClick={() => setIsOpenDialog(true)}
-            className=" text-gurkha/80 hover:text-gold/80 text-center transition-colors"
+            className="absolute text-gurkha/80 hover:text-gold/80 text-center opacity-0 group-hover:opacity-100 transition-all flex justify-center items-center inset-0 place-self-center"
           >
             More details...
           </Button>

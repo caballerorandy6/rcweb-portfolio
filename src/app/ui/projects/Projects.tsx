@@ -2,9 +2,10 @@
 
 import { Badge } from "@/components/ui/badge";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
-import ProjectsIcon from "../Icons/ProjectsIcon";
-import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import ProjectsIcon from "../Icons/ProjectsIcon";
+import ProjectsGridIcon from "../Icons/ProjectsGridIcon";
+import clsx from "clsx";
 
 const projectsImg = [
   { id: "modolithllc", projectImage: "/modolithLLC.webp", alt: "Modolith LLC" },
@@ -44,19 +45,18 @@ const projectsImg = [
 
 export default function Projects() {
   return (
-    <div className="relative col-span-10 lg:col-span-6 border-2 rounded-lg border-gurkha/20 border-opacity-40 bg-dune/40 shadow-md">
+    <div className="w-4/12 border-2 rounded-lg border-gurkha/20 border-opacity-40 bg-dune/40 shadow-md">
       <Card>
         <CardHeader>
           <CardTitle>
             <Badge variant="gold" className="mb-4">
-              <ProjectsIcon />
               Projects
             </Badge>
           </CardTitle>
         </CardHeader>
 
-        <CardContent className="sm:flex flex-wrap justify-center items-center gap-4 mt-2 hidden hover:blur-sm hover:opacity-60 transition-all">
-          {projectsImg.map((img) => (
+        <CardContent className="relative flex flex-wrap justify-center items-center gap-4 mt-2 hover:blur-lg hover:opacity-80 transition-all hover:cursor-pointer">
+          {/* {projectsImg.map((img) => (
             <Image
               key={img.id}
               src={img.projectImage as string}
@@ -65,14 +65,20 @@ export default function Projects() {
               height={500}
               priority
               quality={100}
-              className="w-full h-full rounded opacity-80 sm:w-4/12 md:w-3/12 lg:w-5/12 xl:w-3/12"
+              className="rounded opacity-80 w-5/12 sm:w-4/12 md:w-3/12 lg:w-5/12 xl:w-4/12"
             />
-          ))}
+          ))} */}
+          <ProjectsGridIcon />
+          <Button
+            onClick={() => console.log("See Projects")}
+            className={clsx(
+              "absolute inset-0 m-auto justify-center items-center text-lg font-roboto text-gurkha/80 border-2 rounded-lg border-gurkha/80 z-40 hidden group-hover:flex w-3/12"
+            )}
+          >
+            See Projects
+          </Button>
         </CardContent>
       </Card>
-      <Button className="absolute flex justify-center items-center text-lg font-roboto text-gurkha/80 border-2 rounded-lg border-gurkha/80 ">
-        See Projects
-      </Button>
     </div>
   );
 }

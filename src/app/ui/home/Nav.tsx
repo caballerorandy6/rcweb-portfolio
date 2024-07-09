@@ -13,36 +13,36 @@ import clsx from "clsx";
 export default function Nav() {
   //const { activeSection, setActiveSection } = useActiveSection();
 
-  const links = [
-    {
-      name: "Home",
-      hash: "#home",
-      id: "home",
-      icon: <HomeIcon />,
-    },
-    {
-      name: "Experience",
-      hash: "#experience",
-      id: "experience",
-      icon: <ExperienceIcon />,
-    },
-    {
-      name: "Projects",
-      hash: "#projects",
-      id: "projects",
-      icon: <ProjectsIcon />,
-    },
-    {
-      name: "About",
-      hash: "#about",
-      id: "about",
-      icon: <AboutIcon />,
-    },
-  ];
+  // const links = [
+  //   {
+  //     name: "Home",
+  //     hash: "#home",
+  //     id: "home",
+  //     icon: <HomeIcon />,
+  //   },
+  //   {
+  //     name: "Experience",
+  //     hash: "#experience",
+  //     id: "experience",
+  //     icon: <ExperienceIcon />,
+  //   },
+  //   {
+  //     name: "Projects",
+  //     hash: "#projects",
+  //     id: "projects",
+  //     icon: <ProjectsIcon />,
+  //   },
+  //   {
+  //     name: "About",
+  //     hash: "#about",
+  //     id: "about",
+  //     icon: <AboutIcon />,
+  //   },
+  // ];
 
   return (
     <nav className="w-full flex items-center">
-      <Link href="#" className="w-full ">
+      <Link href="#" className="w-full">
         <Image
           src="/logo.webp"
           alt="RC WEB Logo"
@@ -50,7 +50,7 @@ export default function Nav() {
           height={500}
           quality={100}
           priority
-          className="cursor-pointer object-contain w-48 h-auto mx-auto"
+          className="fixed cursor-pointer object-contain w-48 h-auto mx-auto"
         />
       </Link>
 

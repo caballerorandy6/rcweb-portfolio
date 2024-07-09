@@ -19,7 +19,7 @@ export default function RCWEBExperience() {
   const { isOpenDialogRCWeb, setIsOpenDialogRCWEB } = useDialogState();
 
   return (
-    <div className="flex flex-col md:flex-row lg:flex-col lg:text-center justify-center items-center">
+    <div className="flex flex-col lg:text-center justify-center items-center transition-colors shadow-2xl bg-gradient-to-tr from-gold/10 to-dune/100 rounded-lg mt-4">
       <Image
         src="/logo.webp"
         alt="RCWEB-logo"
