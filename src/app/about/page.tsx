@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Redirect } from "next";
-import UserCheckIcon from "../ui/Icons/UserCheckIcon";
-import SocialLinks from "./SocialLinks";
+import UserCheckIcon from "@/app/ui/Icons/UserCheckIcon";
+import SocialLinks from "@/app/about/SocialLinks";
 
 export default function AboutPage() {
   return (
@@ -35,7 +35,7 @@ export default function AboutPage() {
           different
           <span className="text-gold"> use cases </span> with excellent
           performance and visualization on any device. My experience has allowed
-          me to meet the <span className="text-gold"> requirements </span> of my
+          me to meet <span className="text-gold"> the requirements </span> of my
           clients.
         </p>
       </div>
