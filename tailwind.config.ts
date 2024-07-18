@@ -20,6 +20,7 @@ const config = {
         gurkha: "#929874",
         gold: "#CBB26A",
         dune: "#2B2927",
+        cocoabrown: "#241E1B",
       },
     },
   },

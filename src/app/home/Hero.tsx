@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { yearsOfExperience } from "@/app/lib/utils";
 import { Badge } from "@/components/ui/badge";
-import ContactLinks from "@/app/ui/home/ContactLinks";
+import ContactLinks from "./ContactLinks";
 
 export default function Hero() {
   return (
@@ -18,7 +18,7 @@ export default function Hero() {
           target="_blank"
           className="hidden sm:block"
         >
-          <Badge variant="gold">Open to work</Badge>
+          <Badge variant="default">Open to work</Badge>
         </Link>
       </div>
 

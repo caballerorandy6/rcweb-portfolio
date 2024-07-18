@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Container from "@/app/ui/container/Container";
+import Container from "./ui/Container";
 
 export default function Home() {
   return (

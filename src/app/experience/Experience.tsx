@@ -3,10 +3,11 @@
 import { Badge } from "@/components/ui/badge";
 import ExperienceIcon from "@/app/ui/Icons/ExperienceIcon";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import DialogExperience from "../shadcn-components/DialogExperience";
+import DialogMoreDetails from "@/app/ui/shadcn-components/DialogMoreDetails";
 import { useDialogState } from "@/store/dialogStore";
-import RCWEBExperience from "@/app/ui/experience/RCWebExperience";
-import RevatureExperience from "@/app/ui/experience/RevatureExperience";
+import RCWEBExperience from "./RCWebExperience";
+import RevatureExperience from "./RevatureExperience";
+import ExperienceComponent from "./ExperienceComponent";
 
 export default function Experience() {
   const { isOpenExperienceDialog, setIsOpenExperienceDialog } =
@@ -17,23 +18,20 @@ export default function Experience() {
       <Card className="relative group">
         <CardHeader>
           <CardTitle>
-            <Badge variant="gold" className="mb-4 bg-transparent">
-              Experience
-            </Badge>
+            <Badge variant="default">Experience</Badge>
           </CardTitle>
         </CardHeader>
         <CardContent className="flex justify-center items-center gap-4 mt-2 transition-all group-hover:blur-xl group-hover:duration-300 group-hover:ease-in-out">
           <ExperienceIcon />
         </CardContent>
-        <DialogExperience
+        <DialogMoreDetails
           title="Experience"
           experienceName="Experience"
           isOpenDialog={isOpenExperienceDialog}
           setIsOpenDialog={setIsOpenExperienceDialog}
         >
-          <RCWEBExperience />
-          <RevatureExperience />
-        </DialogExperience>
+          <ExperienceComponent />
+        </DialogMoreDetails>
       </Card>
     </div>
   );

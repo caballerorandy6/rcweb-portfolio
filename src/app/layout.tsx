@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 import { roboto, concertOne } from "./ui/fonts";
-import Header from "@/app/ui/home/Header";
+import Header from "./home/Header";
+import Footer from "@/app/ui/Footer";
 
 export const metadata: Metadata = {
   title: {
@@ -40,9 +41,11 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={`w-full ${concertOne.variable} ${roboto.variable} overflow-y-scroll antialiased absolute top-0 z-[-2] bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]`}
+        className={`w-full ${concertOne.variable} ${roboto.variable} overflow-y-scroll antialiased absolute top-0 z-[-2] bg-cocoabrown`}
       >
+        <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );

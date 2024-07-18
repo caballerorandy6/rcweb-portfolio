@@ -17,10 +17,6 @@
   }
 }
 
-.img-effect {
-  background-image: linear-gradient(
-    to right,
-    rgb(0 0 0 / 0.5),
-    rgb(0 0 0 / 0.6)
-  );
+.image-gradient {
+  mask-image: linear-gradient(black 50%, transparent);
 }

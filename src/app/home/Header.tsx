@@ -1,4 +1,4 @@
-import Nav from "@/app/ui/home/Nav";
+import Nav from "./Nav";
 
 export default function Header() {
   return (

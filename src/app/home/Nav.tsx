@@ -41,16 +41,16 @@ export default function Nav() {
   // ];
 
   return (
-    <nav className="w-full flex items-center">
-      <Link href="#" className="w-full">
+    <nav className="fixed flex justify-between items-center top-0 w-full z-20 h-24 pt-10 header-nav">
+      <Link href="#" className="fixed w-full">
         <Image
           src="/logo.webp"
           alt="RC WEB Logo"
-          width={500}
-          height={500}
+          width={150}
+          height={150}
           quality={100}
           priority
-          className="fixed cursor-pointer object-contain w-48 h-auto mx-auto"
+          className=" cursor-pointer w-auto h-auto mx-auto"
         />
       </Link>
 

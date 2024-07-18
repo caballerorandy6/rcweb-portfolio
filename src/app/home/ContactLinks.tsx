@@ -4,7 +4,7 @@ import Link from "next/link";
 import EmailIcon from "@/app/ui/Icons/EmailIcon";
 import PhoneIcon from "@/app/ui/Icons/PhoneIcon";
 import DownloadIcon from "@/app/ui/Icons/DownloadIcon";
-import TooltipShadcn from "../shadcn-components/TooltipShadcn";
+import TooltipShadcn from "../ui/shadcn-components/TooltipShadcn";
 
 const links = [
   {
