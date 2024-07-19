@@ -29,7 +29,7 @@ const socialLinks = [
 export default function SocialLinks() {
   return (
     <>
-      <Badge className="text-gold font-concertOne text-xl border-2 mt-4 bg-gradient-to-tr from-gold/10 to-dune/100">
+      <Badge className="text-gold font-concertOne text-xl border-none mt-8">
         Follow Me
       </Badge>
       <div className="flex items-center gap-4 mt-4">

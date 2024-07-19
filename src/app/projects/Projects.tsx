@@ -21,7 +21,7 @@ export default function Projects() {
           <ProjectsGridIcon />
         </CardContent>
         <Link
-          href="/ui/projects"
+          href="/projects"
           className="absolute text-gurkha/80 hover:text-gold/80 text-center opacity-0 group-hover:opacity-100 transition-all flex justify-center items-center inset-0 place-self-center text-lg font-roboto"
         >
           More details...

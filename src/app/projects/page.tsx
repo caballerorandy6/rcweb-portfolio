@@ -5,8 +5,8 @@ import {
   CardDescription,
   CardFooter,
 } from "@/components/ui/card";
-import GitHubIcon from "../Icons/GitHubIcon";
-import WorldIcon from "../Icons/WorldIcon";
+
+import GitHubIcon from "../ui/Icons/GitHubIcon";
 
 const projectsImg = [
   {
@@ -85,7 +85,6 @@ export default function ProjectsPage() {
               </CardDescription>
             </CardContent>
             <CardFooter className="flex justify-center items-center gap-4">
-              <WorldIcon />
               <GitHubIcon />
             </CardFooter>
           </Card>
