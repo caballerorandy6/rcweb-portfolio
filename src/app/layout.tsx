@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 import { roboto, concertOne } from "./ui/fonts";
-import Header from "./home/Header";
-import Footer from "@/app/ui/Footer";
+import Header from "./ui/rcweb-components/Header";
+import Footer from "./ui/rcweb-components/Footer";
 
 export const metadata: Metadata = {
   title: {

@@ -1,4 +1,4 @@
-import Container from "./ui/Container";
+import Container from "./ui/rcweb-components/Container";
 
 export default function Home() {
   return (

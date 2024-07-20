@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
-import AboutIcon from "../ui/Icons/AboutIcon";
+import AboutIcon from "../Icons/AboutIcon";
 import { useDialogState } from "@/store/dialogStore";
 
 export default function Projects() {

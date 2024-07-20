@@ -1,9 +1,9 @@
+import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 import LinkedinIcon from "@/app/ui/Icons/LinkedinIcon";
 import GitHubIcon from "@/app/ui/Icons/GitHubIcon";
 import TwitterIcon from "@/app/ui/Icons/TwitterIcon";
-import Link from "next/link";
-import TooltipShadcn from "../ui/shadcn-components/TooltipShadcn";
+import TooltipShadcn from "@/app/ui/shadcn-components/TooltipShadcn";
 
 const socialLinks = [
   {

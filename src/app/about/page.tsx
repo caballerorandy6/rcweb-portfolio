@@ -1,9 +1,9 @@
 import Image from "next/image";
 import { Redirect } from "next";
 import UserCheckIcon from "@/app/ui/Icons/UserCheckIcon";
-import SocialLinks from "@/app/about/SocialLinks";
+import SocialLinks from "@/app/ui/rcweb-components/SocialLinks";
 
-export default function AboutPage() {
+export default function About() {
   return (
     <div className="w-8/12 mx-auto mt-40 flex justify-center gap-20 h-screen">
       <div className="w-6/12">

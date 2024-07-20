@@ -1,11 +1,11 @@
 "use client";
 
-import { Badge } from "@/components/ui/badge";
 import ExperienceIcon from "@/app/ui/Icons/ExperienceIcon";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import DialogMoreDetails from "@/app/ui/shadcn-components/DialogMoreDetails";
 import ExperienceComponent from "./ExperienceComponent";
 import { useDialogState } from "@/store/dialogStore";
+import { Badge } from "@/components/ui/badge";
 
 export default function Experience() {
   const { isOpenExperienceDialog, setIsOpenExperienceDialog } =
