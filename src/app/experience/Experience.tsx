@@ -4,10 +4,8 @@ import { Badge } from "@/components/ui/badge";
 import ExperienceIcon from "@/app/ui/Icons/ExperienceIcon";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import DialogMoreDetails from "@/app/ui/shadcn-components/DialogMoreDetails";
-import { useDialogState } from "@/store/dialogStore";
-import RCWEBExperience from "./RCWebExperience";
-import RevatureExperience from "./RevatureExperience";
 import ExperienceComponent from "./ExperienceComponent";
+import { useDialogState } from "@/store/dialogStore";
 
 export default function Experience() {
   const { isOpenExperienceDialog, setIsOpenExperienceDialog } =

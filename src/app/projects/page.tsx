@@ -5,8 +5,7 @@ import {
   CardDescription,
   CardFooter,
 } from "@/components/ui/card";
-
-import GitHubIcon from "../ui/Icons/GitHubIcon";
+import GitHubIcon from "@/app/ui/Icons/GitHubIcon";
 
 const projectsImg = [
   {
