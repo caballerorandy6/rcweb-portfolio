@@ -33,14 +33,14 @@ export default function DialogExperienceDetail({
           <Button
             variant="ghost"
             onClick={() => setIsOpenDialog(true)}
-            className=" text-gurkha/80 hover:text-gold/80 text-center transition-colors"
+            className="duration-300 ease-in-out transform hover:scale-110 text-gurkha/80 hover:text-gold text-center transition-all text-lg font-concertOne mb-4"
           >
             More details...
           </Button>
         </DialogTrigger>
         <DialogContent className="sm:max-w-[425px]">
           <DialogHeader>
-            <DialogTitle className="text-gurkha/80 font-roboto">
+            <DialogTitle className="text-gurkha/80 font-concertOne">
               {title}
             </DialogTitle>
           </DialogHeader>
@@ -53,7 +53,7 @@ export default function DialogExperienceDetail({
             <Button
               type="button"
               onClick={() => setIsOpenDialog(false)}
-              className="text-md font-roboto shadow-2xl border-gurkha/80 bg-gold/10 hover:bg-gold/15 transition-colors"
+              className="text-md shadow-2xl border-none hover:text-gold bg-gold/10 hover:bg-gold/15 transition-colors font-concertOne text-lg"
             >
               Close
             </Button>

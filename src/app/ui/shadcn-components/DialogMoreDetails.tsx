@@ -15,6 +15,7 @@ interface DialogShadcnProps {
   children: React.ReactNode;
   title: string;
   experienceName?: string;
+  projectsName?: string;
   isOpenDialog: boolean;
   setIsOpenDialog: (isOpen: boolean) => void;
   className?: string;
@@ -33,14 +34,14 @@ export default function DialogMoreDetails({
           <Button
             variant="ghost"
             onClick={() => setIsOpenDialog(true)}
-            className="absolute text-gurkha/80 hover:text-gold/80 text-center opacity-0 group-hover:opacity-100 transition-all flex justify-center items-center inset-0 place-self-center text-lg font-roboto"
+            className="absolute text-gurkha/80 hover:text-gold text-center opacity-0 group-hover:opacity-100 flex justify-center items-center inset-0 place-self-center text-xl font-concertOne transition-all duration-300 ease-in-out transform hover:scale-110"
           >
             More details...
           </Button>
         </DialogTrigger>
         <DialogContent className="sm:max-w-[425px]">
           <DialogHeader>
-            <DialogTitle className="text-gurkha/80 font-roboto">
+            <DialogTitle className="text-gurkha/80 font-concertOne">
               {title}
             </DialogTitle>
           </DialogHeader>
@@ -53,7 +54,7 @@ export default function DialogMoreDetails({
             <Button
               type="button"
               onClick={() => setIsOpenDialog(false)}
-              className="text-md font-roboto shadow-2xl border-gurkha/80 bg-gold/10 hover:bg-gold/15 transition-colors"
+              className="text-md shadow-2xl border-gurkha/80 bg-gold/10 hover:bg-gold/15 transition-colors text-xl font-concertOne"
             >
               Close
             </Button>

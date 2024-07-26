@@ -39,7 +39,7 @@ const experiences: Experience[] = [
     ),
   },
   {
-    title: "Full Stack Developerr",
+    title: "Full Stack Developer",
     years: "2022",
     experienceName: "Revature",
     responsabilities: [
@@ -81,18 +81,15 @@ export default function ExperienceComponent() {
       {experiences.map((experience, index) => (
         <div
           key={index}
-          className="flex flex-col lg:text-center justify-center items-center transition-colors shadow-2xl bg-gradient-to-tr from-gold/10 to-dune/100 rounded-lg mt-4"
+          className="flex flex-col lg:text-center justify-center items-center transition-colors shadow-2xl bg-gradient-to-tr from-gold/10 to-dune/100 rounded-lg"
         >
           {experience.image}
           <div className="flex flex-col text-center">
-            <p className="text-white/80 font-roboto text-md font-semibold">
-              {experience.title}
-            </p>
+            <p className="text-white/80 font-roboto">{experience.title}</p>
             <p className="text-white/80 text-sm">{experience.years}</p>
             <DialogExperienceDetail
               title={`${experience.experienceName} Responsibilities`}
               experienceName={experience.experienceName}
-              //Implementarlo con un bucle
               isOpenDialog={
                 experience.experienceName === "RCWEB"
                   ? isOpenDialogRCWeb
@@ -105,7 +102,9 @@ export default function ExperienceComponent() {
               }
             >
               {experience.responsabilities.map((item, index) => (
-                <li key={index}> • {item}</li>
+                <li key={index} className="font-roboto">
+                  • {item}
+                </li>
               ))}
             </DialogExperienceDetail>
           </div>

@@ -28,22 +28,21 @@ const socialLinks = [
 
 export default function SocialLinks() {
   return (
-    <>
-      <Badge className="text-gold font-concertOne text-xl border-none mt-8">
-        Follow Me
-      </Badge>
-      <div className="flex items-center gap-4 mt-4">
-        {socialLinks.map((link) => (
+    <ul className="flex items-center gap-4 mt-4">
+      {socialLinks.map((link) => (
+        <li
+          className="transition-all duration-300 ease-in-out transform hover:scale-110"
+          key={link.id}
+        >
           <Link
-            key={link.id}
             href={link.href}
             target="_blank"
             className="text-gold font-semibold"
           >
             <TooltipShadcn icon={link.icon}>{link.name}</TooltipShadcn>
           </Link>
-        ))}
-      </div>
-    </>
+        </li>
+      ))}
+    </ul>
   );
 }

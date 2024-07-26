@@ -12,14 +12,14 @@ export default function Experience() {
     useDialogState();
 
   return (
-    <div className="w-4/12 border-2 rounded-lg border-gurkha/20 bg-dune/40 shadow-md group">
+    <div className="w-6/12 sm:w-4/12 border-2 rounded-lg border-gurkha/20 bg-dune/40 shadow-md group">
       <Card className="relative group">
         <CardHeader>
           <CardTitle>
-            <Badge variant="default">Experience</Badge>
+            <Badge variant="custom">Experience</Badge>
           </CardTitle>
         </CardHeader>
-        <CardContent className="flex justify-center items-center gap-4 mt-2 transition-all group-hover:blur-xl group-hover:duration-300 group-hover:ease-in-out">
+        <CardContent className="flex justify-center items-center gap-4 mt-2 transition-all group-hover:blur-lg group-hover:duration-300 group-hover:delay-75 group-hover:ease-in-out">
           <ExperienceIcon />
         </CardContent>
         <DialogMoreDetails

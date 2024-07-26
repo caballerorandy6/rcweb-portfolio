@@ -2,13 +2,13 @@
 
 import Link from "next/link";
 import Image from "next/image";
-//import TooltipShadcn from "../shadcn-components/TooltipShadcn";
-import ExperienceIcon from "@/app/ui/Icons/ExperienceIcon";
-import ProjectsIcon from "@/app/ui/Icons/ProjectsIcon";
-import AboutIcon from "@/app/ui/Icons/AboutIcon";
-import HomeIcon from "@/app/ui/Icons/HomeIcon";
-import clsx from "clsx";
-//import { useActiveSection } from "@/store/activeSectionStore";
+// import TooltipShadcn from "../shadcn-components/TooltipShadcn";
+// import ExperienceIcon from "@/app/ui/Icons/ExperienceIcon";
+// import ProjectsIcon from "@/app/ui/Icons/ProjectsIcon";
+// import AboutIcon from "@/app/ui/Icons/AboutIcon";
+// import HomeIcon from "@/app/ui/Icons/HomeIcon";
+// import clsx from "clsx";
+// import { useActiveSection } from "@/store/activeSectionStore";
 
 export default function Nav() {
   //const { activeSection, setActiveSection } = useActiveSection();
@@ -41,7 +41,7 @@ export default function Nav() {
   // ];
 
   return (
-    <nav className="fixed top-0 left-0 flex justify-start items-center w-full z-20 header-nav py-14">
+    <nav className="fixed top-0 left-0 flex justify-start items-center w-full py-14 header-nav">
       <Link href="#" className="fixed w-full">
         <Image
           src="/logo.webp"
@@ -50,7 +50,7 @@ export default function Nav() {
           height={500}
           quality={100}
           priority
-          className="cursor-pointer w-56 h-auto mx-auto"
+          className="cursor-pointer w-56 h-auto mx-auto sm:ml-6 lg:ml-12"
         />
       </Link>
 

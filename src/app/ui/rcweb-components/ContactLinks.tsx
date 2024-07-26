@@ -32,7 +32,10 @@ export default function ContactLinks() {
   return (
     <ul className="flex justify-center sm:justify-start items-center gap-8 mt-4">
       {links.map((link) => (
-        <li key={link.id}>
+        <li
+          key={link.id}
+          className="transition-all duration-300 ease-in-out transform hover:scale-110"
+        >
           <Link
             href={link.href}
             className="text-gurkha hover:text-gold transition-colors font-roboto font-semibold"
