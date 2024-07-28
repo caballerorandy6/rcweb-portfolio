@@ -42,7 +42,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={`w-full ${concertOne.variable} ${roboto.variable} overflow-y-scroll antialiased absolute top-0 z-[-2] bg-cocoabrown`}
+        className={`w-full ${concertOne.variable} ${roboto.variable} text-pretty overflow-y-scroll antialiased absolute top-0 z-[-2] bg-cocoabrown`}
       >
         <Image
           src="/background.webp"
@@ -51,7 +51,7 @@ export default function RootLayout({
           height={500}
           quality={100}
           priority
-          className="fixed w-full h-full object-cover top-0 left-0 -z-10 mix-blend-overlay"
+          className="fixed w-full h-full object-cover md:object-cover top-0 left-0 -z-10 mix-blend-overlay"
         />
         <Header />
         {children}

@@ -16,7 +16,7 @@ const badgeVariants = cva(
           "border-transparent bg-destructive text-destructive-foreground shadow hover:bg-destructive/80",
         outline: "text-foreground",
         hero: "bg-gold text-dune text-sm border-none font-roboto",
-        custom: "text-gurkha/80 text-base border-none bg-transparent font-bold",
+        custom: "text-gurkha text-lg font-roboto border-none bg-transparent",
       },
     },
     defaultVariants: {

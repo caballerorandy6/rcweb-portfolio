@@ -5,19 +5,19 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import ProjectsGridIcon from "@/app/ui/Icons/ProjectsGridIcon";
 import { useDialogState } from "@/store/dialogStore";
-import DialogMoreDetails from "../shadcn-components/DialogMoreDetails";
+import DialogMoreDetails from "@/app/ui/shadcn-components/DialogMoreDetails";
 
 const typeOfProjects = [
-  { name: "customersProjects", link: "/customers-projects" },
-  { name: "personalProjects", link: "/personal-projects" },
-  { name: "coursesProjects", link: "/courses-projects" },
+  { name: "Real Projects", link: "/real-projects" },
+  { name: "Personal Projects", link: "/personal-projects" },
+  { name: "Courses Projects", link: "/courses-projects" },
 ];
 
 export default function Projects() {
   const { isOpenProjectsDialog, setIsOpenProjectsDialog } = useDialogState();
 
   return (
-    <div className="w-6/12 sm:w-4/12 border-2 rounded-lg border-gurkha/20 bg-dune/40 shadow-md group">
+    <div className="w-8/12 sm:w-5/12 border-2 rounded-lg border-gurkha/20 bg-dune/40 shadow-md group relative">
       <Card className="relative group">
         <CardHeader>
           <CardTitle>
@@ -32,22 +32,17 @@ export default function Projects() {
           isOpenDialog={isOpenProjectsDialog}
           setIsOpenDialog={setIsOpenProjectsDialog}
         >
-          <div>
-            <li>
-              <Link href="/projects">
-                <a className="text-gurkha/80 font-concertOne text-lg hover:text-gold">
-                  RCWeb
-                </a>
+          <ul className="flex justify-start flex-col gap-4">
+            {typeOfProjects.map((type) => (
+              <Link
+                key={type.name}
+                href={type.link}
+                className="text-gurkha hover:text-gold text-center text-xl font-concertOne transition-all duration-300 ease-in-out transform hover:scale-110"
+              >
+                • {type.name}
               </Link>
-            </li>
-            <li>
-              <Link href="/projects">
-                <a className="text-gurkha/80 font-concertOne text-lg hover:text-gold">
-                  Revature
-                </a>
-              </Link>
-            </li>
-          </div>
+            ))}
+          </ul>
         </DialogMoreDetails>
       </Card>
     </div>

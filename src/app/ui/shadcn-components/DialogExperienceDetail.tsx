@@ -27,7 +27,7 @@ export default function DialogExperienceDetail({
   setIsOpenDialog,
 }: DialogShadcnProps) {
   return (
-    <div>
+    <div className="max-h-screen">
       <Dialog open={isOpenDialog} onOpenChange={setIsOpenDialog}>
         <DialogTrigger asChild>
           <Button
@@ -40,13 +40,13 @@ export default function DialogExperienceDetail({
         </DialogTrigger>
         <DialogContent className="sm:max-w-[425px]">
           <DialogHeader>
-            <DialogTitle className="text-gurkha/80 font-concertOne">
+            <DialogTitle className="text-gurkha font-roboto">
               {title}
             </DialogTitle>
           </DialogHeader>
           <Separator
             orientation="horizontal"
-            className="border border-gurkha/80"
+            className="border border-gurkha"
           />
           <ul className="grid gap-4 py-4">{children}</ul>
           <DialogFooter>

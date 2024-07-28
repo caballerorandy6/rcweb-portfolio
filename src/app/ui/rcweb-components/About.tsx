@@ -10,7 +10,7 @@ export default function Projects() {
   const { isOpenAboutDialog, setIsOpenAboutDialog } = useDialogState();
 
   return (
-    <div className="w-6/12 sm:w-4/12 border-2 rounded-lg border-gurkha/20 bg-dune/40 shadow-md group">
+    <div className="w-8/12 sm:w-5/12 border-2 rounded-lg border-gurkha/20 bg-dune/40 shadow-md group">
       <Card className="relative group">
         <CardHeader>
           <CardTitle>
@@ -22,7 +22,7 @@ export default function Projects() {
         </CardContent>
         <Link
           href="/about"
-          className="absolute text-gurkha/80 hover:text-gold text-center opacity-0 group-hover:opacity-100 flex justify-center items-center inset-0 place-self-center text-xl font-concertOne transition-all duration-300 ease-in-out transform hover:scale-110"
+          className="absolute text-gurkha/80 hover:text-gold text-center opacity-0 group-hover:opacity-100 flex justify-center items-center inset-0 place-self-center text-base font-concertOne transition-all duration-300 ease-in-out transform hover:scale-110"
         >
           More details...
         </Link>

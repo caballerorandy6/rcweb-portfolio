@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { Badge } from "@/components/ui/badge";
 import LinkedinIcon from "@/app/ui/Icons/LinkedinIcon";
 import GitHubIcon from "@/app/ui/Icons/GitHubIcon";
 import TwitterIcon from "@/app/ui/Icons/TwitterIcon";
@@ -28,16 +27,15 @@ const socialLinks = [
 
 export default function SocialLinks() {
   return (
-    <ul className="flex items-center gap-4 mt-4">
+    <ul className="flex justify-center sm:justify-start items-center gap-8 mt-4 mb-8">
       {socialLinks.map((link) => (
         <li
-          className="transition-all duration-300 ease-in-out transform hover:scale-110"
           key={link.id}
+          className="transition-all duration-300 ease-in-out transform hover:scale-110"
         >
           <Link
             href={link.href}
-            target="_blank"
-            className="text-gold font-semibold"
+            className="text-gurkha hover:text-gold transition-colors font-roboto font-semibold"
           >
             <TooltipShadcn icon={link.icon}>{link.name}</TooltipShadcn>
           </Link>
