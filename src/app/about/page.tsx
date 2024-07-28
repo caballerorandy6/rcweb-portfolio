@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+//import Image from "next/image";
 import Link from "next/link";
 import UserCheckIcon from "@/app/ui/Icons/UserCheckIcon";
 import SocialLinks from "@/app/ui/rcweb-components/SocialLinks";
