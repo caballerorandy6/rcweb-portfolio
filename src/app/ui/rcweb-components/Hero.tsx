@@ -21,7 +21,7 @@ export default function Hero() {
         </Link>
       </div>
 
-      <p className="text-white/70 font-roboto font-semibold text-lg sm:text-xl text-center sm:text-start">
+      <p className="text-white/70 font-roboto text-lg sm:text-xl text-center sm:text-start">
         Software Engineer with{" "}
         <span className="text-gold">+{yearsOfExperience(2022)} years</span> of
         experience specialized in{" "}

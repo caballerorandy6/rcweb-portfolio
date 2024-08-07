@@ -43,7 +43,7 @@ export default function Nav() {
   return (
     <nav
       id="header-nav"
-      className="fixed top-0 left-0 flex justify-start items-center w-full py-14 header-nav z-10 backdrop-blur-md sm:backdrop-blur-none"
+      className="fixed top-0 left-0 flex justify-start items-center w-full py-14 header-nav z-10 backdrop-blur-lg sm:backdrop-blur-none"
     >
       <Link href="#" className="fixed w-full">
         <Image

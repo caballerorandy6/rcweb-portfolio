@@ -17,6 +17,7 @@ const badgeVariants = cva(
         outline: "text-foreground",
         hero: "bg-gold text-dune text-sm border-none font-roboto",
         custom: "text-gurkha text-lg font-roboto border-none bg-transparent",
+        projects: "bg-dune/80 text-gold shadow-xl border-none p-2",
       },
     },
     defaultVariants: {

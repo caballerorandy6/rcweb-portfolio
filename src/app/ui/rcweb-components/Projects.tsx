@@ -7,7 +7,12 @@ import ProjectsGridIcon from "@/app/ui/Icons/ProjectsGridIcon";
 import { useDialogState } from "@/store/dialogStore";
 import DialogMoreDetails from "@/app/ui/shadcn-components/DialogMoreDetails";
 
-const typeOfProjects = [
+interface ProjectType {
+  name: string;
+  link: string;
+}
+
+const projectType: ProjectType[] = [
   { name: "Real Projects", link: "/real-projects" },
   { name: "Personal Projects", link: "/personal-projects" },
   { name: "Courses Projects", link: "/courses-projects" },
@@ -33,7 +38,7 @@ export default function Projects() {
           setIsOpenDialog={setIsOpenProjectsDialog}
         >
           <ul className="flex justify-start flex-col gap-4">
-            {typeOfProjects.map((type) => (
+            {projectType.map((type) => (
               <Link
                 key={type.name}
                 href={type.link}
